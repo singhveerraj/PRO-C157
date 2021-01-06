@@ -1,6 +1,6 @@
 AFRAME.registerComponent("comics-posters", {
   init: function() {
-    this.posterContainer = this.el;
+    this.postersContainer = this.el;
     this.posters();
   },
 
@@ -40,7 +40,7 @@ AFRAME.registerComponent("comics-posters", {
       const poster = this.createPoster(item);
       borderEl.appendChild(poster);
 
-      this.posterContainer.appendChild(borderEl);
+      this.postersContainer.appendChild(borderEl);
     }
   },
   createBorder: function(position, id) {
@@ -54,10 +54,7 @@ AFRAME.registerComponent("comics-posters", {
     });
 
     entityEl.setAttribute("position", position);
-    entityEl.setAttribute("material", {
-      color: "#fff",
-      opacity: 1
-    });
+    entityEl.setAttribute("material", { color: "#fff" });
 
     return entityEl;
   },
