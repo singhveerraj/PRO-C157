@@ -10,7 +10,7 @@ AFRAME.registerComponent("cursor-listener", {
   
     handlePlacesListState: function () {
       const id = this.el.getAttribute("id");
-      const placesId = ["taj-mahal", "budapest", "new-york-city", "eiffel-tower"];
+      const placesId = ["superman", "spiderman", "captain-aero", "outer-space"];
       if (placesId.includes(id)) {
         const placeContainer = document.querySelector("#places-container");
         placeContainer.setAttribute("cursor-listener", {
